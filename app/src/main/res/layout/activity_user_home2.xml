@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wall_bg"
+    tools:context="com.meghamit.mac.otterapp.UserHome2Activity">
+
+    <ImageView
+        android:id="@+id/postBoxImageView"
+        android:layout_width="190dp"
+        android:layout_height="204dp"
+        android:onClick="checkPostBox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.48"
+        app:srcCompat="@drawable/ic_mailbox"
+        tools:onClick="checkPostBox" />
+
+    <TextView
+        android:id="@+id/postBoxNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:text="P.O. BOX : "
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/postBoxImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/attachImageFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="32dp"
+        android:background="#FFFFFF"
+        android:elevation="@dimen/fab_margin"
+        android:isScrollContainer="false"
+        android:onClick="goToPostOffice"
+        android:text="Go To Post Office"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:theme="@style/AppTheme"
+        app:backgroundTint="#FFFFFF"
+        app:extendMotionSpec="@anim/push_left_out"
+        app:icon="@drawable/ic_post_office"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.867"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shrinkMotionSpec="@anim/push_left_in" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Otter</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Change the following strings as required -->
+    <string name="back4app_app_id">ttsVACWyfl7ENbPmjYZbIo9RtJBTjtHnj06rbc57</string>
+    <string name="back4app_client_key">qc7V5sbO7TKkbqdLoa80c39iC2wbvTsvaSRnnQaH</string>
+    <string name="title_activity_user_home">UserHomeActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="sent_Letters_tab">Sent Letters</string>
+    <string name="received_letters_tab">Received Letters</string>
+</resources>

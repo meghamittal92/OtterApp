@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.meghamit.mac.otterapp.postOffice.SendLetter2Activity">
+
+    <Button
+        android:id="@+id/sendLetterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sendLetter"
+        android:text="Send Letter"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.851"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/letterTitleTextInputLayout"
+        app:layout_constraintVertical_bias="0.292" />
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/letterContentErrorTextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="44dp"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:text="TextView"-->
+<!--        android:visibility="invisible"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/letterContentEditText" />-->
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/letterTitleEditText"-->
+<!--        android:layout_width="140dp"-->
+<!--        android:layout_height="47dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:ems="10"-->
+<!--        android:hint="Letter Title"-->
+<!--        android:inputType="textPersonName"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.162"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/toPostBoxEditText"-->
+<!--        app:layout_constraintVertical_bias="0.029" />-->
+
+    <EditText
+        android:id="@+id/letterContentEditText"
+        android:layout_width="311dp"
+        android:layout_height="272dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="96dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/sendLetterErrorTextView"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sendLetterButton" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/attachImageFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        android:background="#FFFFFF"
+        android:clickable="true"
+        android:elevation="@dimen/fab_margin"
+        android:isScrollContainer="false"
+        android:onClick="attachImage"
+        android:text="Add Image"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:theme="@style/AppTheme"
+        app:backgroundTint="#FFFFFF"
+        app:extendMotionSpec="@anim/push_left_out"
+        app:srcCompat="@drawable/ic_attach"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shrinkMotionSpec="@anim/push_left_in" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/takePhotoFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        android:background="#FFFFFF"
+        android:clickable="true"
+        android:elevation="@dimen/fab_margin"
+        android:isScrollContainer="false"
+        android:onClick="takePhoto"
+        android:src="@drawable/ic_ar_camera"
+        android:text="Add Image"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:theme="@style/AppTheme"
+        app:backgroundTint="#FFFFFF"
+        app:extendMotionSpec="@anim/push_left_out"
+        app:icon="@drawable/ic_share_post"
+        app:layout_constraintStart_toEndOf="@+id/attachImageFab"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shrinkMotionSpec="@anim/push_left_in" />
+
+    <TextView
+        android:id="@+id/fileUploadStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/takePhotoFab"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/uploadFileprogressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="31dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/takePhotoFab"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/thumbnailImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="32dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/letterContentEditText"
+        app:layout_constraintStart_toEndOf="@+id/takePhotoFab"
+        app:srcCompat="@drawable/ic_business"
+        tools:srcCompat="@drawable/ic_business" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/toPostBoxTextInputLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/letterContentEditText">
+
+        <EditText
+            android:id="@+id/toPostBoxEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="To PostBox"
+            android:inputType="textPersonName"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/letterTitleTextInputLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        app:boxCollapsedPaddingTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toPostBoxTextInputLayout">>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/letterTitleEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Letter Title"
+            android:inputType="textPersonName"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    <EditText-->
+<!--        android:id="@+id/toPostBoxEditText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginTop="28dp"-->
+<!--        android:ems="10"-->
+<!--        android:hint="To PostBox Number"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:textSize="16sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.209"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/letterContentErrorTextView" />-->
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/floatingActionButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:clickable="true"-->
+<!--        app:srcCompat="@drawable/ic_attach"-->
+<!--        tools:layout_editor_absoluteX="256dp"-->
+<!--        tools:layout_editor_absoluteY="29dp" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

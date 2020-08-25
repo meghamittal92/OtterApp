@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "699165510124",
+    "firebase_url": "https://otterapppushnotifications.firebaseio.com",
+    "project_id": "otterapppushnotifications",
+    "storage_bucket": "otterapppushnotifications.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:699165510124:android:3a9885c6164be7b83e58c9",
+        "android_client_info": {
+          "package_name": "com.meghamit.mac.otterapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "699165510124-dlsno9keqepmv7evlvum8tk5612ts5b6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6WXaiyDI_r835yBCLXVHjIFDJoM9ozck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "699165510124-dlsno9keqepmv7evlvum8tk5612ts5b6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
